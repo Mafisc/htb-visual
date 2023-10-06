@@ -1,4 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="powershell shell.ps1" />
+  </Target>
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
